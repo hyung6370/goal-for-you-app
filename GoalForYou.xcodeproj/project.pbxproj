@@ -48,7 +48,6 @@
 		BDBCF3462A93396B006B777D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BDBCF3492A9343B8006B777D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BDBCF34D2A93A8E3006B777D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		BDBCF34F2A93AECC006B777D /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		DC7A7822F2D3AEDDAB30AAA1 /* Pods-GoalForYou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalForYou.release.xcconfig"; path = "Target Support Files/Pods-GoalForYou/Pods-GoalForYou.release.xcconfig"; sourceTree = "<group>"; };
 		E3EA00DC6685A3B0A357F856 /* Pods-GoalForYou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalForYou.debug.xcconfig"; path = "Target Support Files/Pods-GoalForYou/Pods-GoalForYou.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +75,6 @@
 		BDAE0A572A91C7AE000AE805 = {
 			isa = PBXGroup;
 			children = (
-				BDBCF34F2A93AECC006B777D /* .gitignore.md */,
 				BDAE0A622A91C7AE000AE805 /* GoalForYou */,
 				BDAE0A612A91C7AE000AE805 /* Products */,
 				C7514C59683A84676DB7BA4F /* Pods */,

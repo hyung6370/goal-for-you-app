@@ -42,28 +42,28 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="MU8-lr-koE">
-                                <rect key="frame" x="45" y="553" width="203" height="135.33333333333337"/>
+                                <rect key="frame" x="45.000000000000014" y="553" width="254.33333333333337" height="118"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="이루고 싶은 목표를" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6a-LN-LFW">
-                                        <rect key="frame" x="0.0" y="0.0" width="157" height="24.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="173.66666666666666" height="21"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFLight" family="Gmarket Sans TTF" pointSize="21"/>
                                         <color key="textColor" red="0.99233597520000005" green="0.97982758280000004" blue="0.78985393049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="달성하도록 도와주는" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOW-OE-pXO">
-                                        <rect key="frame" x="0.0" y="30.666666666666629" width="169.33333333333334" height="24.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="27" width="188" height="21"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFLight" family="Gmarket Sans TTF" pointSize="21"/>
                                         <color key="textColor" red="0.99233597520000005" green="0.97982758280000004" blue="0.78985393049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Goal for you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xX-hJ-DUm">
-                                        <rect key="frame" x="0.0" y="61.333333333333371" width="203" height="43.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="54" width="254.33333333333334" height="37"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="37"/>
                                         <color key="textColor" red="0.99233597520000005" green="0.97982758280000004" blue="0.78985393049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="입니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saI-cV-Wvr">
-                                        <rect key="frame" x="0.0" y="110.66666666666663" width="60.333333333333336" height="24.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="97" width="65.333333333333329" height="21"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFLight" family="Gmarket Sans TTF" pointSize="21"/>
                                         <color key="textColor" red="0.99233597520000005" green="0.97982758280000004" blue="0.78985393049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -149,13 +149,13 @@
                                 <rect key="frame" x="20" y="193" width="353" height="485"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIF-Vb-hp2">
-                                        <rect key="frame" x="100.66666666666669" y="80" width="152" height="48"/>
+                                        <rect key="frame" x="87.333333333333329" y="80" width="178.66666666666669" height="50"/>
                                         <fontDescription key="fontDescription" name="MontserratAlternates-Bold" family="Montserrat Alternates" pointSize="41"/>
                                         <color key="textColor" red="0.30658382179999999" green="0.11642428489999999" blue="0.56081837420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OEq-yy-tci">
-                                        <rect key="frame" x="40" y="205" width="273" height="105"/>
+                                        <rect key="frame" x="40" y="207" width="273" height="105"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q3N-Vs-zHK">
                                                 <rect key="frame" x="0.0" y="0.0" width="273" height="45"/>
@@ -176,7 +176,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQn-Wi-acT">
-                                        <rect key="frame" x="40" y="360" width="273" height="40"/>
+                                        <rect key="frame" x="40" y="362" width="273" height="40"/>
                                         <color key="backgroundColor" red="0.30658382179999999" green="0.11642428489999999" blue="0.56081837420000002" alpha="0.87758934580000003" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="bxQ-TQ-ItQ"/>
@@ -243,13 +243,13 @@
                                 <rect key="frame" x="20" y="193" width="353" height="485"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5J-W5-3rx">
-                                        <rect key="frame" x="125.66666666666666" y="80" width="102" height="48"/>
+                                        <rect key="frame" x="116" y="80" width="121" height="50"/>
                                         <fontDescription key="fontDescription" name="MontserratAlternates-Bold" family="Montserrat Alternates" pointSize="41"/>
                                         <color key="textColor" red="0.30658382179999999" green="0.11642428489999999" blue="0.56081837420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cJA-eV-OAv">
-                                        <rect key="frame" x="40" y="205" width="273" height="105"/>
+                                        <rect key="frame" x="40" y="207" width="273" height="105"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOB-LY-JsV">
                                                 <rect key="frame" x="0.0" y="0.0" width="273" height="45"/>
@@ -270,7 +270,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWJ-65-IJa">
-                                        <rect key="frame" x="40" y="360" width="273" height="40"/>
+                                        <rect key="frame" x="40" y="362" width="273" height="40"/>
                                         <color key="backgroundColor" red="0.30658382179999999" green="0.11642428489999999" blue="0.56081837420000002" alpha="0.87758934576779801" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="D9T-JT-zdP"/>
@@ -368,6 +368,9 @@
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="b3J-O6-EZJ"/>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="ah3-x6-QaD"/>
     </inferredMetricsTieBreakers>
