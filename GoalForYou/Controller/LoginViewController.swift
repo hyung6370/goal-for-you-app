@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -35,5 +36,21 @@ class LoginViewController: UIViewController {
         loginButton.clipsToBounds = true
     }
     
-
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        
+        if let email = emailTextField.text, let password = pwTextField.text {
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e)
+                }
+                else {
+                    self.performSegue(withIdentifier: "LoginToHome", sender: self)
+                }
+              
+            }
+        }
+        
+        
+    }
+    
 }

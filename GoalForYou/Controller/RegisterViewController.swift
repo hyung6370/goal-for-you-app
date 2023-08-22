@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
     
@@ -34,5 +35,23 @@ class RegisterViewController: UIViewController {
         registerButton.layer.cornerRadius = 20
         registerButton.clipsToBounds = true
     }
-
+    
+    
+    @IBAction func registerButtonTapped(_ sender: UIButton) {
+        
+        if let email = emailTextField.text, let password = pwTextField.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e.localizedDescription)
+                }
+                else {
+                    self.performSegue(withIdentifier: "RegisterToHome", sender: self)
+                }
+            }
+        }
+        
+        
+        
+    }
+    
 }

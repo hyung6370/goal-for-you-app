@@ -8,39 +8,36 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="MontserratAlternates-Bold.ttf">
-            <string>MontserratAlternates-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="cux-aX-7Cm">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="864"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="goal for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OP5-DW-Jbr">
-                                <rect key="frame" x="90" y="405.66666666666669" width="213" height="41"/>
-                                <fontDescription key="fontDescription" name="MontserratAlternates-Bold" family="Montserrat Alternates" pointSize="33"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="VSP-zc-Ris">
+                                <rect key="frame" x="20" y="362" width="353" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="I0U-S6-kpK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="cux-aX-7Cm" secondAttribute="bottom" id="5xt-Ez-GeD"/>
                             <constraint firstItem="cux-aX-7Cm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CEe-D6-dAR"/>
-                            <constraint firstItem="OP5-DW-Jbr" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="D6z-RW-gCj"/>
-                            <constraint firstItem="OP5-DW-Jbr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MLF-mX-ObC"/>
+                            <constraint firstItem="VSP-zc-Ris" firstAttribute="centerY" secondItem="cux-aX-7Cm" secondAttribute="centerY" id="ULn-yK-dVC"/>
+                            <constraint firstItem="VSP-zc-Ris" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vb1-oI-MuN"/>
                             <constraint firstItem="cux-aX-7Cm" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="uRW-e8-W0p"/>
                             <constraint firstItem="cux-aX-7Cm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wu8-ax-eyc"/>
+                            <constraint firstItem="VSP-zc-Ris" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="303" id="ycf-2N-NM7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VSP-zc-Ris" secondAttribute="trailing" constant="20" id="zpX-FR-RoJ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -51,6 +48,7 @@
     </scenes>
     <resources>
         <image name="Background" width="314" height="580"/>
+        <image name="LogoTitle.png" width="346.90908813476562" height="84.872726440429688"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

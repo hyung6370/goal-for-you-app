@@ -171,7 +171,7 @@
                                                     <constraint firstAttribute="height" constant="45" id="MmK-oj-AFP"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -186,6 +186,9 @@
                                         <state key="normal" title="회원가입">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerButtonTapped:" destination="Hr4-lg-Uj8" eventType="touchUpInside" id="kPH-rJ-VWc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.75080358979999995" green="0.61187827589999999" blue="0.88630419969999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -251,7 +254,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cJA-eV-OAv">
                                         <rect key="frame" x="40" y="207" width="273" height="105"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOB-LY-JsV">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@2.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOB-LY-JsV">
                                                 <rect key="frame" x="0.0" y="0.0" width="273" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="3ry-H4-GNI"/>
@@ -259,13 +262,13 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DNg-Sx-Ghv">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DNg-Sx-Ghv">
                                                 <rect key="frame" x="0.0" y="60" width="273" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="fJH-mt-v0L"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -280,6 +283,9 @@
                                         <state key="normal" title="로그인">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="ebM-l0-cGG" eventType="touchUpInside" id="K5x-tI-aUf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.75080358979999995" green="0.61187827589999999" blue="0.88630419969999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -341,7 +347,13 @@
                             <outlet property="delegate" destination="SwL-KC-yt4" id="MUp-FT-e3D"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="C2s-ez-sQE"/>
+                    <navigationItem key="navigationItem" id="C2s-ez-sQE">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="JoX-gm-44J">
+                            <connections>
+                                <action selector="logoutPressed:" destination="SwL-KC-yt4" id="IxX-Ok-grW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAU-DF-WAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,7 +367,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nnv-Kk-uhG">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" systemColor="labelColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -368,11 +380,8 @@
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="b3J-O6-EZJ"/>
-    </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="ah3-x6-QaD"/>
+        <segue reference="GY3-fb-FYE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background" width="314" height="580"/>

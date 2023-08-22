@@ -25,6 +25,8 @@
 		BDBCF3472A93396B006B777D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBCF3462A93396B006B777D /* LoginViewController.swift */; };
 		BDBCF34A2A9343B8006B777D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBCF3492A9343B8006B777D /* RegisterViewController.swift */; };
 		BDBCF34E2A93A8E3006B777D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBCF34D2A93A8E3006B777D /* HomeTableViewController.swift */; };
+		BDBCF3532A93B373006B777D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDBCF3522A93B373006B777D /* GoogleService-Info.plist */; };
+		BDBCF3562A94786E006B777D /* LogoTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBCF3552A94786E006B777D /* LogoTitle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		BDBCF3462A93396B006B777D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BDBCF3492A9343B8006B777D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BDBCF34D2A93A8E3006B777D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		BDBCF3522A93B373006B777D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDBCF3552A94786E006B777D /* LogoTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoTitle.png; sourceTree = "<group>"; };
 		DC7A7822F2D3AEDDAB30AAA1 /* Pods-GoalForYou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalForYou.release.xcconfig"; path = "Target Support Files/Pods-GoalForYou/Pods-GoalForYou.release.xcconfig"; sourceTree = "<group>"; };
 		E3EA00DC6685A3B0A357F856 /* Pods-GoalForYou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalForYou.debug.xcconfig"; path = "Target Support Files/Pods-GoalForYou/Pods-GoalForYou.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,7 +97,6 @@
 		BDAE0A622A91C7AE000AE805 /* GoalForYou */ = {
 			isa = PBXGroup;
 			children = (
-				BDBCF3022A9326CE006B777D /* New Group */,
 				BDAE0A632A91C7AE000AE805 /* AppDelegate.swift */,
 				BDAE0A652A91C7AE000AE805 /* SceneDelegate.swift */,
 				BDAE0A7C2A925CE5000AE805 /* Model */,
@@ -101,10 +104,11 @@
 				BDAE0A7A2A925CDB000AE805 /* Controller */,
 				BDAE0A6F2A91C7B1000AE805 /* Assets.xcassets */,
 				BDBCF3392A932AB7006B777D /* Font */,
-				BDAE0A712A91C7B1000AE805 /* LaunchScreen.storyboard */,
+				BDBCF3542A947849006B777D /* Launch */,
 				BDAE0A742A91C7B1000AE805 /* Info.plist */,
 				BDAE0A6C2A91C7AE000AE805 /* GoalForYou.xcdatamodeld */,
 				BDAE0A8A2A931A58000AE805 /* animation.json */,
+				BDBCF3522A93B373006B777D /* GoogleService-Info.plist */,
 			);
 			path = GoalForYou;
 			sourceTree = "<group>";
@@ -135,13 +139,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		BDBCF3022A9326CE006B777D /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		BDBCF3392A932AB7006B777D /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +150,15 @@
 				BDBCF33C2A932AD5006B777D /* MontserratAlternates-SemiBold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		BDBCF3542A947849006B777D /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				BDAE0A712A91C7B1000AE805 /* LaunchScreen.storyboard */,
+				BDBCF3552A94786E006B777D /* LogoTitle.png */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		C7514C59683A84676DB7BA4F /* Pods */ = {
@@ -232,6 +238,8 @@
 				BDAE0A6B2A91C7AE000AE805 /* Main.storyboard in Resources */,
 				BDBCF3442A932AD5006B777D /* GmarketSansTTFMedium.ttf in Resources */,
 				BDAE0A8B2A931A58000AE805 /* animation.json in Resources */,
+				BDBCF3532A93B373006B777D /* GoogleService-Info.plist in Resources */,
+				BDBCF3562A94786E006B777D /* LogoTitle.png in Resources */,
 				BDBCF3422A932AD5006B777D /* MontserratAlternates-SemiBold.ttf in Resources */,
 				BDBCF3402A932AD5006B777D /* GmarketSansTTFBold.ttf in Resources */,
 			);

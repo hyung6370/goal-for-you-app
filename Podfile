@@ -7,5 +7,7 @@ target 'GoalForYou' do
 
   # Pods for GoalForYou
   pod 'lottie-ios'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 end
