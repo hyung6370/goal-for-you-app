@@ -349,6 +349,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="C2s-ez-sQE">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="JoX-gm-44J">
+                            <color key="tintColor" red="0.4984642863" green="0.21651217340000001" blue="0.76867121459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="logoutPressed:" destination="SwL-KC-yt4" id="IxX-Ok-grW"/>
                             </connections>
@@ -367,7 +368,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nnv-Kk-uhG">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" systemColor="labelColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
