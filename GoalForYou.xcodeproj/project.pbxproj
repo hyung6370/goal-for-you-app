@@ -31,6 +31,9 @@
 		BDEE70152A964B38003CD799 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE70142A964B38003CD799 /* HomeViewController.swift */; };
 		BDEE70182A964E7A003CD799 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE70162A964E7A003CD799 /* GoalTableViewCell.swift */; };
 		BDEE70192A964E7A003CD799 /* GoalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDEE70172A964E7A003CD799 /* GoalTableViewCell.xib */; };
+		BDEE701B2A974BAE003CD799 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE701A2A974BAE003CD799 /* GoalViewController.swift */; };
+		BDEE70252A98673D003CD799 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE70242A98673D003CD799 /* Journey.swift */; };
+		BDEE70272A9867D9003CD799 /* AddJourneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE70262A9867D9003CD799 /* AddJourneyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		BDEE70142A964B38003CD799 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BDEE70162A964E7A003CD799 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		BDEE70172A964E7A003CD799 /* GoalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalTableViewCell.xib; sourceTree = "<group>"; };
+		BDEE701A2A974BAE003CD799 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
+		BDEE70242A98673D003CD799 /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
+		BDEE70262A9867D9003CD799 /* AddJourneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJourneyViewController.swift; sourceTree = "<group>"; };
 		DC7A7822F2D3AEDDAB30AAA1 /* Pods-GoalForYou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalForYou.release.xcconfig"; path = "Target Support Files/Pods-GoalForYou/Pods-GoalForYou.release.xcconfig"; sourceTree = "<group>"; };
 		E3EA00DC6685A3B0A357F856 /* Pods-GoalForYou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalForYou.debug.xcconfig"; path = "Target Support Files/Pods-GoalForYou/Pods-GoalForYou.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +135,8 @@
 				BDBCF3492A9343B8006B777D /* RegisterViewController.swift */,
 				BDEE70122A9620D6003CD799 /* AddGoalViewController.swift */,
 				BDEE70142A964B38003CD799 /* HomeViewController.swift */,
+				BDEE701A2A974BAE003CD799 /* GoalViewController.swift */,
+				BDEE70262A9867D9003CD799 /* AddJourneyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				BDEE70102A96048A003CD799 /* Goal.swift */,
+				BDEE70242A98673D003CD799 /* Journey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDEE70132A9620D6003CD799 /* AddGoalViewController.swift in Sources */,
+				BDEE70272A9867D9003CD799 /* AddJourneyViewController.swift in Sources */,
 				BDEE70112A96048A003CD799 /* Goal.swift in Sources */,
 				BDBCF3472A93396B006B777D /* LoginViewController.swift in Sources */,
 				BDAE0A682A91C7AE000AE805 /* ViewController.swift in Sources */,
@@ -315,6 +325,8 @@
 				BDEE70182A964E7A003CD799 /* GoalTableViewCell.swift in Sources */,
 				BDEE70152A964B38003CD799 /* HomeViewController.swift in Sources */,
 				BDBCF34A2A9343B8006B777D /* RegisterViewController.swift in Sources */,
+				BDEE701B2A974BAE003CD799 /* GoalViewController.swift in Sources */,
+				BDEE70252A98673D003CD799 /* Journey.swift in Sources */,
 				BDAE0A6E2A91C7AE000AE805 /* GoalForYou.xcdatamodeld in Sources */,
 				BDAE0A662A91C7AE000AE805 /* SceneDelegate.swift in Sources */,
 			);

@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     
     
     @IBOutlet weak var logoutButton: UIBarButtonItem!
-    
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var GoalTableView: UITableView!
     
     let db = Firestore.firestore()
@@ -27,11 +27,13 @@ class HomeViewController: UIViewController {
         GoalTableView.dataSource = self
         
         loadGoals()
+        
+        navigationItem.hidesBackButton = true
     }
-    
+
     func loadGoals() {
         if let uid = Auth.auth().currentUser?.uid {
-            db.collection("users").document(uid).collection("goals").addSnapshotListener { (querySnapshot, error) in
+            db.collection("users").document(uid).collection("goals").order(by: "reminderDate", descending: false).addSnapshotListener { (querySnapshot, error) in
                 if let e = error {
                     print("Error fetching data from Firestore: \(e.localizedDescription)")
                 }
@@ -89,10 +91,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
+}
 
-    
-    
+extension HomeViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let goalVC = storyboard.instantiateViewController(withIdentifier: "GoalVC") as? GoalViewController {
+            
+            let selectedGoal = goals[indexPath.row]
+            goalVC.goalTitle = selectedGoal.title
+            goalVC.goalDescription = selectedGoal.description
+            
+            self.navigationController?.pushViewController(goalVC, animated: true)
+        }
+    }
 }
 
 

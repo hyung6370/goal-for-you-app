@@ -11,6 +11,6 @@ struct Goal {
     var title: String?
     var description: String?
     var reminderDate: String?
-    
     var uniqueId: String?
+    let journeys: [Journey] = []
 }

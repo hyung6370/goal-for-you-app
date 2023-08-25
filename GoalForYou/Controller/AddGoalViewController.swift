@@ -15,6 +15,7 @@ class AddGoalViewController: UIViewController {
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var completeButton: UIButton!
     
+    
     let db = Firestore.firestore()
     
     let goals: [Goal] = []
@@ -61,11 +62,14 @@ class AddGoalViewController: UIViewController {
                 "reminderDate": currentDateString
             ]
             
-            db.collection("users").document(uid).collection("goals").addDocument(data: goalData) { (error) in
+            let newGoalRef = db.collection("users").document(uid).collection("goals").document()
+            newGoalRef.setData(goalData) { error in
                 if let e = error {
                     print("Error saving data to Firestore: \(e.localizedDescription)")
-                }
-                else {
+                } else {
+                    let goalId = newGoalRef.documentID
+                    print("Goal Document ID: \(goalId)")
+                    
                     print("Successfully saved data")
                     self.navigationController?.popViewController(animated: true)
                 }
