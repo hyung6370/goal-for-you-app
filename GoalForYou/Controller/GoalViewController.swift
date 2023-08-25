@@ -10,6 +10,7 @@ import Firebase
 
 class GoalViewController: UIViewController {
     
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var mainDescription: UILabel!
     @IBOutlet weak var itemTableView: UITableView!
@@ -34,6 +35,9 @@ class GoalViewController: UIViewController {
         itemTableView.delegate = self
         itemTableView.dataSource = self
         
+    }
+    
+    func configureUI() {
         
     }
     
@@ -52,7 +56,7 @@ class GoalViewController: UIViewController {
             return
         }
         
-        db.collection("users").document(uid).collection("goals").document(goalId).collection("journeys").getDocuments { (snapshot, error) in
+        db.collection("users").document(uid).collection("goals").document(goalId).collection("journeys").order(by: "journeyReminderDate").getDocuments { (snapshot, error) in
             if let e = error {
                 print("Error fetching journeys from Firestore: \(e.localizedDescription)")
                 return

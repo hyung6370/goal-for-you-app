@@ -101,6 +101,7 @@ extension HomeViewController {
             let selectedGoal = goals[indexPath.row]
             goalVC.goalTitle = selectedGoal.title
             goalVC.goalDescription = selectedGoal.description
+            goalVC.goalDocumentId = selectedGoal.uniqueId
             
             self.navigationController?.pushViewController(goalVC, animated: true)
         }
