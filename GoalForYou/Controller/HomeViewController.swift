@@ -93,6 +93,63 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { action, view, completionHandler in
+            self.deleteGoal(at: indexPath)
+            completionHandler(true)
+        }
+        
+        deleteAction.image = UIImage(systemName: "trash.fill")
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        
+        return configuration
+    }
+    
+    func deleteGoal(at indexPath: IndexPath) {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            print("UID가 누락되었습니다.")
+            return
+        }
+        
+        let goal = goals[indexPath.row]
+        
+        guard let uniqueId = goal.uniqueId else {
+            print("Goal의 uniqueId가 누락되었습니다.")
+            return
+        }
+        
+        let goalRef = db.collection("users").document(uid).collection("goals").document(uniqueId)
+        
+        goalRef.delete() { error in
+            if let e = error {
+                print("Goal 삭제 오류: \(e.localizedDescription)")
+            } else {
+                
+                let alertController = UIAlertController(title: "Goal 삭제", message: "해당 Goal을 지우시겠습니까?", preferredStyle: .alert)
+                
+                let confirmAction = UIAlertAction(title: "확인", style: .default) {
+                    (action) in
+                    if indexPath.row < self.goals.count {
+                        print("Goal이 성공적으로 삭제되었습니다.")
+                        self.goals.remove(at: indexPath.row)
+                        self.GoalTableView.deleteRows(at: [indexPath], with: .automatic)
+                    }
+                    else {
+                        print("Warning: Attempting to delete a goal out of range.")
+                    }
+                }
+                
+                let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+                
+                alertController.addAction(confirmAction)
+                alertController.addAction(cancelAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
 }
 
 extension HomeViewController {

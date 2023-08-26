@@ -115,6 +115,65 @@ extension GoalViewController: UITableViewDelegate, UITableViewDataSource {
         itemTableView.deselectRow(at: indexPath, animated: true)
     }
     
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+            self.deleteJourney(at: indexPath)
+            completionHandler(true)
+        }
+        
+        deleteAction.image = UIImage(systemName: "trash.fill")
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        
+        return configuration
+    }
+    
+    func deleteJourney(at indexPath: IndexPath) {
+        guard let uid = Auth.auth().currentUser?.uid, let goalId = goalDocumentId else {
+            print("UID 또는 Goal Document ID가 누락되었습니다.")
+            return
+        }
+        
+        let journey = journeys[indexPath.row]
+        guard let journeyId = journey.journeyId else {
+            print("Journey ID가 누락되었습니다.")
+            return
+        }
+        
+        let journeyRef = db.collection("users").document(uid).collection("goals").document(goalId).collection("journeys").document(journeyId)
+        
+        journeyRef.delete() { error in
+            if let e = error {
+                print("Journey 삭제 오류: \(e.localizedDescription)")
+            }
+            else {
+                
+                let alertController = UIAlertController(title: "기록 삭제", message: "해당 기록을 지우시겠습니까?", preferredStyle: .alert)
+                
+                let confirmAction = UIAlertAction(title: "확인", style: .default) { (action) in
+                    print("해당 Journey가 성공적으로 삭제되었습니다.")
+                    self.journeys.remove(at: indexPath.row)
+                    self.itemTableView.deleteRows(at: [indexPath], with: .automatic)
+                    
+                    if self.journeys.allSatisfy({ $0.done }) {
+                        self.updateGoalDoneStatus(uid: uid, goalId: goalId, isDone: true)
+                    }
+                    else {
+                        self.updateGoalDoneStatus(uid: uid, goalId: goalId, isDone: false)
+                    }
+                }
+                
+                let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+                
+                alertController.addAction(confirmAction)
+                alertController.addAction(cancelAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    
     func updateJourneyDoneStatus(at index: Int) {
         guard let uid = Auth.auth().currentUser?.uid, let goalId = goalDocumentId else {
             print("UID 또는 Goal Document ID가 누락되었습니다.")

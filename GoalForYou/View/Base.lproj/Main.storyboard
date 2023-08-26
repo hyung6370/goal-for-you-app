@@ -254,20 +254,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oss-hk-44x">
-                                <rect key="frame" x="-10" y="162" width="413" height="690"/>
+                                <rect key="frame" x="-10" y="172" width="413" height="680"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srf-iw-0Vy">
-                                <rect key="frame" x="0.0" y="103" width="393" height="59"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="69"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oo4-oA-PwH">
-                                        <rect key="frame" x="118.66666666666669" y="0.0" width="156" height="37"/>
+                                        <rect key="frame" x="118.66666666666669" y="3" width="156" height="37"/>
                                         <fontDescription key="fontDescription" name="MontserratAlternates-Bold" family="Montserrat Alternates" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내가 이룰 목표를 채워 봅시다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjV-a5-LFg">
-                                        <rect key="frame" x="112" y="36" width="169" height="23"/>
+                                        <rect key="frame" x="112" y="36" width="169" height="33"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -278,7 +278,7 @@
                                     <constraint firstItem="oo4-oA-PwH" firstAttribute="centerX" secondItem="srf-iw-0Vy" secondAttribute="centerX" id="Buq-BO-ok6"/>
                                     <constraint firstItem="SjV-a5-LFg" firstAttribute="top" secondItem="srf-iw-0Vy" secondAttribute="top" constant="36" id="KrO-hE-hCg"/>
                                     <constraint firstItem="SjV-a5-LFg" firstAttribute="centerX" secondItem="srf-iw-0Vy" secondAttribute="centerX" id="LT5-c7-6Eh"/>
-                                    <constraint firstItem="oo4-oA-PwH" firstAttribute="top" secondItem="srf-iw-0Vy" secondAttribute="top" id="XxO-KI-e0g"/>
+                                    <constraint firstItem="oo4-oA-PwH" firstAttribute="top" secondItem="srf-iw-0Vy" secondAttribute="top" constant="3" id="cEp-A6-XoV"/>
                                     <constraint firstAttribute="bottom" secondItem="SjV-a5-LFg" secondAttribute="bottom" id="wcE-vD-3dh"/>
                                 </constraints>
                             </view>
@@ -295,7 +295,7 @@
                             <constraint firstItem="srf-iw-0Vy" firstAttribute="top" secondItem="KSh-Xo-iIr" secondAttribute="top" id="VvL-F4-qeJ"/>
                             <constraint firstAttribute="trailing" secondItem="srf-iw-0Vy" secondAttribute="trailing" id="YuT-ub-sVH"/>
                             <constraint firstAttribute="bottom" secondItem="Oss-hk-44x" secondAttribute="bottom" id="jKf-Ta-dmE"/>
-                            <constraint firstAttribute="bottom" secondItem="srf-iw-0Vy" secondAttribute="bottom" constant="690" id="uvY-EB-hsf"/>
+                            <constraint firstAttribute="bottom" secondItem="srf-iw-0Vy" secondAttribute="bottom" constant="680" id="uvY-EB-hsf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Goal for you" id="Zbb-Pc-B85">

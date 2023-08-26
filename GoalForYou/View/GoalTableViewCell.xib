@@ -15,28 +15,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GoalsCell" rowHeight="71" id="KGk-i7-Jjw" customClass="GoalTableViewCell" customModule="GoalForYou" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GoalsCell" rowHeight="83" id="KGk-i7-Jjw" customClass="GoalTableViewCell" customModule="GoalForYou" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="293.66666666666669" height="71"/>
+                <rect key="frame" x="0.0" y="0.0" width="293.66666666666669" height="83"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Rb0-aY-PNL">
-                        <rect key="frame" x="19.999999999999996" y="15" width="60.666666666666657" height="41"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Rb0-aY-PNL">
+                        <rect key="frame" x="19.999999999999996" y="15" width="60.666666666666657" height="46"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKb-2A-EJ8">
                                 <rect key="frame" x="0.0" y="0.0" width="60.666666666666664" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="KtI-Y4-Pcq"/>
+                                    <constraint firstAttribute="height" constant="25" id="KtI-Y4-Pcq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="20"/>
                                 <color key="textColor" red="0.53678005929999995" green="0.279930234" blue="0.76474684479999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VP-4R-fkz">
-                                <rect key="frame" x="0.0" y="27" width="60.666666666666664" height="14"/>
-                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="15"/>
+                                <rect key="frame" x="0.0" y="23" width="60.666666666666664" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="PcP-KX-iMs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="13"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,7 +57,7 @@
                 <outlet property="descriptionLabel" destination="2VP-4R-fkz" id="LXc-ub-WYH"/>
                 <outlet property="titleLabel" destination="CKb-2A-EJ8" id="Ad4-OH-M9l"/>
             </connections>
-            <point key="canvasLocation" x="-540" y="-7"/>
+            <point key="canvasLocation" x="-540.4580152671756" y="-3.1690140845070425"/>
         </tableViewCell>
     </objects>
 </document>
