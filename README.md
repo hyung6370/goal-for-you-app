@@ -10,9 +10,9 @@
 
 </div>
 
-[블로그 정리 글 보러가기](https://www.notion.so/hyung6370/Goal-For-You-465885bec26d40319fdb964dd6bbfa5a?pvs=4)
+[✏ 블로그 정리 글 보러가기](https://www.notion.so/hyung6370/Goal-For-You-465885bec26d40319fdb964dd6bbfa5a?pvs=4)
 
-<br /><br /><hr />
+<br /><hr />
 
 ### 📌 화면 구성📱
 |메인 로고|인트로 화면|로그인 화면|회원가입 화면|
