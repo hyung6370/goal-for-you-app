@@ -9,5 +9,6 @@ target 'GoalForYou' do
   pod 'lottie-ios'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift'
 
 end

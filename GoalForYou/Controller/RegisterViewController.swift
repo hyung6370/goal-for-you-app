@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var emailTextField: UITextField!
@@ -19,8 +19,19 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
 
         configureUI()
+        
+        keyboardGesture()
     }
     
+    func keyboardGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
 
     func configureUI() {
         backView.layer.cornerRadius = 20

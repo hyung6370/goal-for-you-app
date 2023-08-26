@@ -8,6 +8,8 @@
 import UIKit
 import CoreData
 import Firebase
+import IQKeyboardManagerSwift
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
+        IQKeyboardManager.shared.enable = true
         
         FirebaseApp.configure()
         let db = Firestore.firestore()

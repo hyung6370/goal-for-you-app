@@ -10,7 +10,6 @@ import Firebase
 
 class HomeViewController: UIViewController {
     
-    
     @IBOutlet weak var logoutButton: UIBarButtonItem!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var GoalTableView: UITableView!
@@ -53,7 +52,6 @@ class HomeViewController: UIViewController {
             }
         }
     }
-    
 
     @IBAction func logoutButtonTapped(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: "로그아웃", message: "정말 로그아웃 하시겠습니까?", preferredStyle: .alert)
@@ -74,7 +72,6 @@ class HomeViewController: UIViewController {
 
         present(alertController, animated: true, completion: nil)
     }
-
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -166,7 +163,6 @@ extension HomeViewController {
         }
     }
 }
-
 
 extension UIColor {
     convenience init(hexCode: String, alpha: CGFloat = 1.0) {

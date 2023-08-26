@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class AddJourneyViewController: UIViewController {
+class AddJourneyViewController: UIViewController, UITextFieldDelegate {
     
     let db = Firestore.firestore()
     
@@ -29,6 +29,18 @@ class AddJourneyViewController: UIViewController {
         }
 
         configureUI()
+        
+        keyboardGesture()
+    }
+    
+    func keyboardGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func configureUI() {
@@ -110,6 +122,5 @@ class AddJourneyViewController: UIViewController {
                 self.navigationController?.popViewController(animated: true)
             }
         }
-        
     }
 }

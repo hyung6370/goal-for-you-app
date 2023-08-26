@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class AddGoalViewController: UIViewController {
+class AddGoalViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var titleTextField: UITextField!
@@ -24,8 +24,22 @@ class AddGoalViewController: UIViewController {
         super.viewDidLoad()
 
         configureUI()
+        
+        titleTextField.delegate = self
+        descriptionTextField.delegate = self
+        
+        keyboardGesture()
     }
     
+    func keyboardGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
 
     func configureUI() {
         backView.layer.cornerRadius = 20
@@ -40,7 +54,6 @@ class AddGoalViewController: UIViewController {
         completeButton.layer.cornerRadius = 20
         completeButton.clipsToBounds = true
     }
-    
     
     @IBAction func completeBtnTapped(_ sender: UIButton) {
         
@@ -79,5 +92,4 @@ class AddGoalViewController: UIViewController {
             print("로그인 되지 않았습니다.")
         }
     }
-    
 }
