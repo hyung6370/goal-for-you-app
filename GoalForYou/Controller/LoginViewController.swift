@@ -48,7 +48,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        
         if let email = emailTextField.text, let password = pwTextField.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let e = error {
@@ -57,11 +56,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 else {
                     self.performSegue(withIdentifier: "LoginToHome", sender: self)
                 }
-              
             }
         }
-        
-        
     }
-    
 }

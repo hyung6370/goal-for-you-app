@@ -82,6 +82,8 @@ class GoalViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         if let addJourneyVC = storyboard.instantiateViewController(identifier: "AddJourneyVC") as? AddJourneyViewController {
+            
+            addJourneyVC.goalDocumentId = self.goalDocumentId
     
             self.navigationController?.pushViewController(addJourneyVC, animated: true)
         }
@@ -172,7 +174,6 @@ extension GoalViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-    
     
     func updateJourneyDoneStatus(at index: Int) {
         guard let uid = Auth.auth().currentUser?.uid, let goalId = goalDocumentId else {

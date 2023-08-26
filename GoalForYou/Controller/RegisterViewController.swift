@@ -47,7 +47,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         registerButton.clipsToBounds = true
     }
     
-    
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         
         if let email = emailTextField.text, let password = pwTextField.text {
@@ -60,9 +59,5 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        
-        
-        
     }
-    
 }

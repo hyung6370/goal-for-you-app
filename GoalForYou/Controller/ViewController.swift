@@ -39,9 +39,5 @@ class ViewController: UIViewController {
         registerButton.layer.cornerRadius = 20
         registerButton.clipsToBounds = true
     }
-    
-    
-
-    
 }
 
