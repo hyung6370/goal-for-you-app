@@ -21,7 +21,7 @@
 
 |홈 화면|Goal 추가 화면|Journey 화면|Journey 추가 화면|
 |---|---|---|---|
-|![simulator_screenshot_4663CED4-56D8-4234-94CD-AC3B1A787A61](https://github.com/hyung6370/goal-for-you-app/assets/81064963/70329e3f-1922-4947-b0a1-538af3fe1a02)|![simulator_screenshot_0DA6CC6D-9164-4C7F-AF42-35D06BE38CA7](https://github.com/hyung6370/goal-for-you-app/assets/81064963/1941c494-791d-4f06-8e28-cc750accd855)|![simulator_screenshot_EDD731D1-9205-4D06-805A-317F00864502](https://github.com/hyung6370/goal-for-you-app/assets/81064963/a401d41b-8674-4ed6-83ab-0031c00c3574)|![simulator_screenshot_38F4B4BA-1A19-40B5-B325-DFBB84C0B087](https://github.com/hyung6370/goal-for-you-app/assets/81064963/b274413b-c60a-43f1-8850-e44050319490)|
+|![simulator_screenshot_A48DB6D2-C429-421C-B5B1-8976869DDA11](https://github.com/hyung6370/goal-for-you-app/assets/81064963/a017c94b-a177-4c0d-92e7-7a6ccd820486)|![simulator_screenshot_7DA355CC-327B-4214-B122-CB0E0EB2E7BB](https://github.com/hyung6370/goal-for-you-app/assets/81064963/7ebc71dd-e063-4864-9197-c62e08cd2b31)|![simulator_screenshot_EDD731D1-9205-4D06-805A-317F00864502](https://github.com/hyung6370/goal-for-you-app/assets/81064963/a401d41b-8674-4ed6-83ab-0031c00c3574)|![simulator_screenshot_38F4B4BA-1A19-40B5-B325-DFBB84C0B087](https://github.com/hyung6370/goal-for-you-app/assets/81064963/b274413b-c60a-43f1-8850-e44050319490)|
 
 
 ### 📌 주요 기능
