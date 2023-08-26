@@ -94,12 +94,18 @@ class AddJourneyViewController: UIViewController {
         ]
         
         
-        db.collection("users").document(uid).collection("goals").document(goalId).collection("journeys").addDocument(data: journeyData) { error in
-            
+        let journeysCollection = db.collection("users").document(uid).collection("goals").document(goalId).collection("journeys")
+        let newJourneyRef = journeysCollection.document()
+
+        newJourneyRef.setData(journeyData) { error in
             if let e = error {
                 print("Firestore에 Journey 데이터를 저장하는 중 오류 발생: \(e.localizedDescription)")
             }
             else {
+                // 여기서 문서 ID를 가져옵니다.
+                self.journeyDocumentId = newJourneyRef.documentID
+                print("생성된 Journey의 ID: \(self.journeyDocumentId ?? "알 수 없음")")
+                
                 print("Journey가 성공적으로 저장되었습니다.")
                 self.navigationController?.popViewController(animated: true)
             }

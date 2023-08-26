@@ -21,13 +21,11 @@ class GoalViewController: UIViewController {
     
     var goalTitle: String?
     var goalDescription: String?
-    
     var goalDocumentId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+   
         addButtonCreated()
         fetchMain()
         
@@ -37,20 +35,12 @@ class GoalViewController: UIViewController {
         
     }
     
-    func configureUI() {
-        
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadJourneys()
     }
     
-    
     func loadJourneys() {
-        print("Current UID: \(Auth.auth().currentUser?.uid ?? "No UID")")
-        print("Goal Document ID: \(goalDocumentId ?? "No Goal Document ID")")
-        
         guard let uid = Auth.auth().currentUser?.uid, let goalId = goalDocumentId else {
             print("UID or Goal Document ID is missing")
             return
@@ -68,11 +58,10 @@ class GoalViewController: UIViewController {
                 for doc in documents {
                     let data = doc.data()
                     if let journeyTitle = data["journeyTitle"] as? String, let journeyDescription = data["journeyDescription"] as? String {
-                        let newJourney = Journey(journeyTitle: journeyTitle, journeyDescription: journeyDescription)
+                        let newJourney = Journey(journeyId: doc.documentID, journeyTitle: journeyTitle, journeyDescription: journeyDescription, done: data["done"] as? Bool ?? false)
                         self.journeys.append(newJourney)
                     }
                 }
-                
                 self.itemTableView.reloadData()
             }
         }
@@ -93,8 +82,7 @@ class GoalViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         if let addJourneyVC = storyboard.instantiateViewController(identifier: "AddJourneyVC") as? AddJourneyViewController {
-            
-            
+    
             self.navigationController?.pushViewController(addJourneyVC, animated: true)
         }
     }
@@ -113,6 +101,61 @@ extension GoalViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.text = journey.journeyTitle
         cell.descriptionLabel.text = journey.journeyDescription
         
+        cell.accessoryType = journey.done ? .checkmark : .none
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        journeys[indexPath.row].done = !journeys[indexPath.row].done
+        
+        updateJourneyDoneStatus(at: indexPath.row)
+        
+        itemTableView.reloadRows(at: [indexPath], with: .automatic)
+        itemTableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func updateJourneyDoneStatus(at index: Int) {
+        guard let uid = Auth.auth().currentUser?.uid, let goalId = goalDocumentId else {
+            print("UID 또는 Goal Document ID가 누락되었습니다.")
+            return
+        }
+        
+        let journey = journeys[index]
+        guard let journeyId = journey.journeyId else {
+            print("Journey ID가 누락되었습니다.")
+            return
+        }
+        
+        let journeyRef = db.collection("users").document(uid).collection("goals").document(goalId).collection("journeys").document(journeyId)
+        
+        journeyRef.updateData(["done": journey.done]) { (error) in
+            if let e = error {
+                print("journey의 done 상태 업데이트 오류: \(e.localizedDescription)")
+            }
+            else {
+                print("Journey의 done 상태가 성공적으로 업데이트 되었습니다.")
+                
+                if self.journeys.allSatisfy({ $0.done }) {
+                    self.updateGoalDoneStatus(uid: uid, goalId: goalId, isDone: true)
+                }
+                else {
+                    self.updateGoalDoneStatus(uid: uid, goalId: goalId, isDone: false)
+                }
+            }
+        }
+    }
+    
+    func updateGoalDoneStatus(uid: String, goalId: String, isDone: Bool) {
+        let goalRef = db.collection("users").document(uid).collection("goals").document(goalId)
+        
+        goalRef.updateData(["done": isDone]) { (error) in
+            if let e = error {
+                print("Goal의 done 상태 업데이트 오류: \(e.localizedDescription)")
+            }
+            else {
+                print("Goal의 done 상태가 성공적으로 업데이트 되었습니다.")
+            }
+        }
     }
 }

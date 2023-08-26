@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
                     
                     for document in querySnapshot!.documents {
                         let data = document.data()
-                        let newGoal = Goal(title: data["title"] as? String, description: data["description"] as? String, reminderDate: data["reminderDate"] as? String, uniqueId: document.documentID)
+                        let newGoal = Goal(title: data["title"] as? String, description: data["description"] as? String, reminderDate: data["reminderDate"] as? String, uniqueId: document.documentID, done: data["done"] as? Bool ?? false)
                         self.goals.append(newGoal)
                     }
                     
@@ -88,6 +88,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let goal = goals[indexPath.row]
         cell.titleLabel.text = goal.title
         cell.descriptionLabel.text = goal.description
+        
+        cell.accessoryType = goal.done ? .checkmark : .none
         
         return cell
     }
