@@ -12,7 +12,7 @@
 
 <br />
 
-[✏ 블로그 정리 글 보러가기]([https://www.notion.so/hyung6370/Goal-For-You-465885bec26d40319fdb964dd6bbfa5a?pvs=4](https://emptyhead.oopy.io/465885be-c26d-4031-9fdb-964dd6bbfa5a))
+[✏ 블로그 정리 글 보러가기](https://emptyhead.oopy.io/465885be-c26d-4031-9fdb-964dd6bbfa5a)
 
 <br /><hr />
 
