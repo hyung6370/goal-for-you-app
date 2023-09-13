@@ -20,7 +20,7 @@
 
 <img width="1051" alt="스크린샷 2023-09-13 오후 12 39 38" src="https://github.com/hyung6370/goal-for-you-app/assets/81064963/5b20f118-d347-4b7e-af78-560dd08230a4">
 
-<br /><br />
+<br />
 
 <img width="1047" alt="스크린샷 2023-09-13 오후 12 40 03" src="https://github.com/hyung6370/goal-for-you-app/assets/81064963/e66dc42f-a692-460a-923c-43584cb93235">
 
